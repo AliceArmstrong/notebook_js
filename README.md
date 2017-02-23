@@ -1,4 +1,4 @@
-#### nōtoノート
+## nōtoノート
 
 Collaborators: @AliceArmstrong, @nryn, @joemaidman, @aleximm1
 
@@ -18,7 +18,8 @@ To achieve this, we had to create our own testing framework from scratch; **Geni
 ![GenieJS](https://www.dropbox.com/s/sz584f858ola0k3/Screen%20Shot%202017-04-14%20at%2018.22.27.png?dl=0)
 
 
-```User stories:
+```
+User stories:
 
 As a programmer
 So I can find the note I want
@@ -30,4 +31,5 @@ I want to be able to create a new note
 
 As a programmer
 So I can see all the information in the note
-I want to see the full text of an individual note on its own page```
+I want to see the full text of an individual note on its own page
+```
