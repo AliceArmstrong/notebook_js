@@ -13,16 +13,9 @@ Technologies used:
 
 To achieve this, we had to create our own testing framework from scratch; **GenieJS**. We created GenieJS in JavaScript and used it to TDD our project, building it up alongside our project by creating the testing functionality we needed before writing each bit of functionality for our web app.
 
-<center>
 ![Screenshot](/screenshot.png)
-</center>
 
-
-
-
-<center>
 ![GenieJS](/genie.png)
-</center>
 
 
 ```
