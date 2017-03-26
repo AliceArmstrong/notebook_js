@@ -15,7 +15,7 @@ To achieve this, we had to create our own testing framework from scratch; **Geni
 
 ![Screenshot](/screenshot.png)
 
-![GenieJS](/genie.png)
+![GenieJS](/geniejs.png)
 
 
 ```
