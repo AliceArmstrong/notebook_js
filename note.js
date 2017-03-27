@@ -1,3 +1,3 @@
 function Note(){
-  
-}
+  this.body = "";
+};
