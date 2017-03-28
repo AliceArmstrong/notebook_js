@@ -26,5 +26,8 @@
         assert(this.name, this.subject === "")
     };
 
+    Wish.prototype.isType = function(type) {
+        assert(this.name, (this.subject.constructor.name) === type.constructor.name)
+    }
     exports.Wish = Wish
 })(this);

@@ -1,0 +1,3 @@
+function Notebook() {
+this.notes = [];
+};
