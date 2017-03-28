@@ -5,14 +5,24 @@ function Wish(name, subject) {
   this.subject = subject;
 };
 
+Wish.prototype.assert = function (x) {
+  try{
+    if(!x){
+      throw new Error(this.name + ": Fail");
+    }
+    else {
+      console.log("%c" + this.name + ": Granted", "color: green;");
+    }
+  }
+  catch(error){
+    console.log("%c" + error, "color: red;")
+  }
+};
+
 Wish.prototype.isDefined = function () {
-  if (typeof(this.subject) === "undefined")
-    throw new Error("%c" + this.name + ": Fail", "color: red;");
-  else {console.log("%c" + this.name + ": Granted", "color: green;");}
+  this.assert(typeof(this.subject) !== "undefined")
 };
 
 Wish.prototype.isEmptyString = function() {
-  if (this.subject !== "")
-    throw new Error("%c" + this.name + ": Fail", "color: red;");
-  else {console.log("%c" + this.name + ": Granted", "color: green;");}
-}
+  this.assert(this.subject === "")
+};
