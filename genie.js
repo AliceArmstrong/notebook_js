@@ -1,28 +1,30 @@
 // GenieJS Test Suite
 
-function Wish(name, subject) {
-  this.name = name;
-  this.subject = subject;
-};
+(function(exports) {
+    function Wish(name, subject) {
+        this.name = name;
+        this.subject = subject;
+    };
 
-Wish.prototype.assert = function (x) {
-  try{
-    if(!x){
-      throw new Error(this.name + ": Fail");
+    var assert = function(name, x) {
+        try {
+            if (!x) {
+                throw new Error(name + ": Fail");
+            } else {
+                console.log("%c" + name + ": Granted", "color: green;");
+            }
+        } catch (error) {
+            console.log("%c" + error.stack, "color: red;");
+        }
     }
-    else {
-      console.log("%c" + this.name + ": Granted", "color: green;");
+
+    Wish.prototype.isDefined = function() {
+        assert(this.name, typeof(this.subject) !== "undefined");
     }
-  }
-  catch(error){
-    console.log("%c" + error, "color: red;")
-  }
-};
 
-Wish.prototype.isDefined = function () {
-  this.assert(typeof(this.subject) !== "undefined")
-};
+    Wish.prototype.isEmptyString = function() {
+        assert(this.name, this.subject === "")
+    };
 
-Wish.prototype.isEmptyString = function() {
-  this.assert(this.subject === "")
-};
+    exports.Wish = Wish
+})(this);
