@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="note.js"></script>
+    <script src="notebook.js"></script>
+    <script src="interface.js"></script>
+    <style>
+    textarea, button{
+      box-sizing: border-box;
+      margin: 10px;
+      display: block;
+    }
+    h1{
+      font-family: verdana;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>nōtoノート</h1>
+    <div id="create-notes-area">
+      <textarea id="content"></textarea>
+      <button onClick="saveNote();">Create Note</button>
+    </div>
+    <div id="show-notes-area">
+      <ul id="list-of-notes">
+
+      </ul>
+    </div>
+  </body>
+  </html>
