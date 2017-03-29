@@ -12,16 +12,18 @@
             if (!x) {
                 throw new Error(name + ": Fail");
             } else {
-                printedTestResult.innerHTML = name + ": Granted"
-                document.getElementById('passingtestresults').appendChild(printedTestResult)
-                console.log("%c" + name + ": Granted", "color: green;");
+                printedTestResult.innerHTML = name
+                printedTestResult.className += " passed"
+                document.getElementById('testresults').appendChild(printedTestResult)
             }
         } catch (error) {
             console.log("%c" + error.stack, "color: red;");
             printedTestResult.innerHTML = error.stack
-            document.getElementById('failingtestresults').appendChild(printedTestResult)
+            printedTestResult.className += " failed"
+            document.getElementById('testresults').appendChild(printedTestResult)
         }
     }
+
     Wish.prototype.isDefined = function() {
         assert(this.name, typeof(this.subject) !== "undefined");
     }
@@ -31,7 +33,12 @@
     };
 
     Wish.prototype.isType = function(type) {
-        assert(this.name, (this.subject.constructor.name) === type.constructor.name)
+        assert(this.name, this.subject.constructor.name === type.constructor.name)
     }
+
+    Wish.prototype.isEqualTo = function(objectToMatch) {
+        assert(this.name, this.subject === objectToMatch)
+    }
+
     exports.Wish = Wish
 })(this);
