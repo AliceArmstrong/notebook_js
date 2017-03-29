@@ -8,16 +8,20 @@
 
     var assert = function(name, x) {
         try {
+            var printedTestResult = document.createElement('li')
             if (!x) {
                 throw new Error(name + ": Fail");
             } else {
+                printedTestResult.innerHTML = name + ": Granted"
+                document.getElementById('passingtestresults').appendChild(printedTestResult)
                 console.log("%c" + name + ": Granted", "color: green;");
             }
         } catch (error) {
             console.log("%c" + error.stack, "color: red;");
+            printedTestResult.innerHTML = error.stack
+            document.getElementById('failingtestresults').appendChild(printedTestResult)
         }
     }
-
     Wish.prototype.isDefined = function() {
         assert(this.name, typeof(this.subject) !== "undefined");
     }
