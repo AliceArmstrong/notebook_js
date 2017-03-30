@@ -33,7 +33,7 @@
     };
 
     Wish.prototype.isType = function(type) {
-        assert(this.name, this.subject.constructor.name === type.constructor.name)
+        assert(this.name, this.subject.constructor.name === type)
     }
 
     Wish.prototype.isEqualTo = function(objectToMatch) {
