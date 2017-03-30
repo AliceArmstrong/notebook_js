@@ -8,10 +8,10 @@ Notebook.prototype.createNote = function(noteBody) {
   return note;
 };
 
-Notebook.prototype.printNoteBodies = function() {
+Notebook.prototype.printNoteAbbr = function() {
   return this.notes.map(function(note) {
     var listElement = document.createElement('li');
-    listElement.innerHTML = note.body;
+    listElement.innerHTML = note.abbr(20);
     return listElement;
   });
 };

@@ -9,7 +9,7 @@ function saveNote(){
 function showNotes(){
   var notesList = document.getElementById('list-of-notes');
   notesList.innerHTML = "";
-  notebook.printNoteBodies().forEach(function(element){
+  notebook.printNoteAbbr().forEach(function(element){
     notesList.appendChild(element);
   });
 }
