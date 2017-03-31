@@ -1,3 +1,9 @@
+[contenteditable=true]:empty:before {
+  content: attr(data-placeholder);
+  display: block; /* For Firefox */
+  color: #31a7b6;
+}
+
 #content, button{
   box-sizing: border-box;
   margin: 10px;
@@ -56,19 +62,6 @@ button {
   font-family: 'Comfortaa', 'verdana', san-serif;
   font-size: 100%;
   padding: 4px;
-}
-
-::-webkit-input-placeholder {
-  color: #31a7b6;
-}
-::-moz-placeholder {
-  color: #31a7b6;
-}
-:-moz-placeholder {
-  color: #31a7b6;
-}
-:-ms-input-placeholder {
-  color: #31a7b6;
 }
 
 #list-of-notes {
