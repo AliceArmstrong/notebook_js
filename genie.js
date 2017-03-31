@@ -38,8 +38,25 @@
     }
 
     Wish.prototype.isEqualTo = function(objectToMatch) {
-        assert(this.name, this.subject === objectToMatch)
+        assert(this.name, this.subject.toString() === objectToMatch.toString())
     }
 
+    freezeTime = function(time){
+      this.originalDateToStringMethod = Date.toString;
+      var dummyDate = time.toString();
+      Date.prototype.toString = function(){
+        return dummyDate;
+      };
+    }
+
+    unfreezeTime = function () {
+      Date.prototype.toString = function(){
+      return Date.apply(this.originalDateToStringMethod);
+      };
+    };
+
     exports.Wish = Wish
+    exports.freezeTime = freezeTime;
+    exports.unfreezeTime = unfreezeTime;
+
 })(this);
