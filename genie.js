@@ -41,7 +41,7 @@
     }
 
     freezeTime = function(time){
-      this.originalDateToStringMethod = Date.toString();
+      this.originalDateToStringMethod = Date.toString;
       var dummyDate = time.toString();
       Date.prototype.toString = function(){
         return dummyDate;
@@ -57,5 +57,5 @@
     exports.Wish = Wish
     exports.freezeTime = freezeTime;
     exports.unfreezeTime = unfreezeTime;
-    
+
 })(this);
