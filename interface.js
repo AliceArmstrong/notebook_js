@@ -1,8 +1,8 @@
 var notebook = new Notebook();
 
 function saveNote(){
-  notebook.createNote(document.getElementById('content').value);
-  document.getElementById('content').value = ""
+  notebook.createNote(document.getElementById('content').textContent);
+  document.getElementById('content').textContent = ""
   showNotes();
 }
 
@@ -20,7 +20,7 @@ function toggleNoteView(noteId){
   if (noteLi.getAttribute("abbr") === "true") {
     noteLi.innerHTML = thisNote.body;
     noteLi.setAttribute("abbr","false");
-    noteLi.style.maxHeight= "400px";
+    noteLi.style.maxHeight= "9001px";
   }
   else {
     noteLi.innerHTML = thisNote.abbr(20);
