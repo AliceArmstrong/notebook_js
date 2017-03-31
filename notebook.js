@@ -15,6 +15,7 @@ Notebook.prototype.printNoteAbbr = function() {
     listElement.setAttribute("onClick","toggleNoteView(this.id)")
     listElement.setAttribute("abbr","true")
     listElement.innerHTML = note.abbr(20);
+    listElement.style.maxHeight= "18.4px";
     return listElement;
   });
 };

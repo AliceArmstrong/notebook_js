@@ -12,3 +12,5 @@ new Wish("Notebook can write out a list of note abbreviations", notebook.printNo
 new Wish("Notebook's abbreviation html elements have ids", notebook.printNoteAbbr()[0].id).isEqualTo("note5");
 new Wish("Notebook can write out a list of note abbreviations", notebook.printNoteAbbr()[0].innerHTML).isEqualTo(time.getHours() + ":" + time.getMinutes() + " I am the eggman, I a...");
 unfreezeTime();
+
+// TODO WISH ACCEPT ANON FUNCTION

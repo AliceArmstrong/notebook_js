@@ -1,0 +1,72 @@
+textarea, button{
+  box-sizing: border-box;
+  margin: 10px;
+  display: block;
+}
+body{
+  font-family: 'Comfortaa', 'verdana', san-serif;
+  background: linear-gradient(#e8ffff, #31a7b6);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#create-notes-area {
+  position: relative;
+}
+
+button {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: paleturquoise;
+  font-family: 'Comfortaa', 'verdana', san-serif;
+  position: absolute;
+  right: 0;
+  font-size: 100%
+}
+
+#show-notes-area {
+  width: 400px;
+  margin-top: 42px;
+}
+
+#show-notes-area li {
+  word-wrap: break-word;
+  list-style: none;
+  border: 3px dotted black;
+  border-radius: 5px;
+  padding: 6px;
+  background-color: paleturquoise;
+  margin: 6px 0;
+  transition: max-height 1s;
+}
+
+#content {
+  width: 400px;
+  border: 6px double black;
+  border-radius: 5px;
+  background-color: paleturquoise;
+  font-family: 'Comfortaa', 'verdana', san-serif;
+  font-size: 100%;
+  padding: 4px;
+}
+
+::-webkit-input-placeholder {
+  color: #31a7b6;
+}
+::-moz-placeholder {
+  color: #31a7b6;
+}
+:-moz-placeholder {
+  color: #31a7b6;
+}
+:-ms-input-placeholder {
+  color: #31a7b6;
+}
+
+#list-of-notes {
+  padding: 0;
+}

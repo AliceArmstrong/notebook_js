@@ -20,9 +20,11 @@ function toggleNoteView(noteId){
   if (noteLi.getAttribute("abbr") === "true") {
     noteLi.innerHTML = thisNote.body;
     noteLi.setAttribute("abbr","false");
+    noteLi.style.maxHeight= "400px";
   }
   else {
     noteLi.innerHTML = thisNote.abbr(20);
     noteLi.setAttribute("abbr","true");
+    noteLi.style.maxHeight= "18.4px";
   }
 }
