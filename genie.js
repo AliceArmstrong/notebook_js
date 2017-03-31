@@ -17,6 +17,7 @@
                 document.getElementById('testresults').appendChild(printedTestResult)
             }
         } catch (error) {
+            document.getElementById('the-don').setAttribute("src", "sadgenieface.gif");
             console.log("%c" + error.stack, "color: red;");
             printedTestResult.innerHTML = error.stack
             printedTestResult.className += " failed"
