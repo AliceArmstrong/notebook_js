@@ -11,6 +11,9 @@ Notebook.prototype.createNote = function(noteBody) {
 Notebook.prototype.printNoteAbbr = function() {
   return this.notes.map(function(note) {
     var listElement = document.createElement('li');
+    listElement.id = note.id;
+    listElement.setAttribute("onClick","toggleNoteView(this.id)")
+    listElement.setAttribute("abbr","true")
     listElement.innerHTML = note.abbr(20);
     return listElement;
   });
