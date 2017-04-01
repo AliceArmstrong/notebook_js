@@ -125,19 +125,24 @@ button {
     min-height: 4em;
     padding: 1em;
     font-size: 34pt;
+    word-break: break-word;
   }
   #show-notes-area li {
     border: 8px dotted black;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 0.5em;
     line-height: 2em;
-    min-height: 2em;
+    font-size: 1.2em;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
   }
   .time {
     padding: 0px 18px 0px 18px;
     border-radius: 10px;
-    margin: 10px 0.4em 0 0;
+    margin: 0px 0.4em 0 0;
     line-height: 2em;
-    font-size: 32pt;
+    font-size: 1em;
+    box-sizing: border-box;
   }
 }
