@@ -9,9 +9,21 @@
   margin: 10px;
   display: block;
 }
+
+.time {
+  background-color: black;
+  color: paleturquoise;
+  padding: 3px 6px 0px 6px;
+  border-radius: 5px;
+  margin: 0px 6px 0px 0px;
+  float: left;
+  font-style: normal;
+  line-height: 1.2em;
+}
+
 body{
   font-family: 'Comfortaa', 'verdana', san-serif;
-  background: linear-gradient(#e8ffff, #31a7b6);
+  background: linear-gradient(#e8ffff, #1bbbbb);
   display: flex;
   justify-content: center;
   margin-top: 10em;
@@ -34,12 +46,20 @@ button {
   font-family: 'Comfortaa', 'verdana', san-serif;
   position: absolute;
   right: 0;
-  font-size: 100%
+  font-size: 100%;
+  padding-top: 5px;
+  box-sizing: border-box;
 }
 
 #show-notes-area {
   width: 600px;
   margin-top: 42px;
+}
+
+.empty {
+  text-align: center;
+  font-style: italic;
+  color: #31a7b6;
 }
 
 #show-notes-area li {
@@ -49,9 +69,11 @@ button {
   border-radius: 5px;
   padding: 6px;
   background-color: paleturquoise;
-  margin: 6px 0;
+  margin: 10px 0;
   transition: max-height 1s;
   overflow: auto;
+  line-height: 1.4em;
+  min-height: 1.4em;
 }
 
 #content {
@@ -62,8 +84,60 @@ button {
   font-family: 'Comfortaa', 'verdana', san-serif;
   font-size: 100%;
   padding: 4px;
+  display: flex;
+  align-items: center;
+  line-height: 1.6em;
 }
 
 #list-of-notes {
   padding: 0;
+}
+
+@media only screen
+  and (min-device-width: 50px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    font-size: 25pt;
+  }
+  button {
+    border: 5px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 38px;
+  }
+
+  #show-notes-area, #create-notes-area {
+    width: 90%;
+  }
+
+  #show-notes-area {
+    margin-top: 4.4em;
+  }
+
+  #container {
+    width: 100%;
+  }
+  #content {
+    width: auto;
+    border: 15px double black;
+    border-radius: 15px;
+    min-height: 4em;
+    padding: 1em;
+    font-size: 34pt;
+  }
+  #show-notes-area li {
+    border: 8px dotted black;
+    border-radius: 10px;
+    padding: 0.5em;
+    line-height: 2em;
+    min-height: 2em;
+  }
+  .time {
+    padding: 0px 18px 0px 18px;
+    border-radius: 10px;
+    margin: 10px 0.4em 0 0;
+    line-height: 2em;
+    font-size: 32pt;
+  }
 }

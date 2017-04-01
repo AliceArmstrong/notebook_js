@@ -4,19 +4,19 @@
     <script src="note.js"></script>
     <script src="notebook.js"></script>
     <script src="interface.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <div id="container">
-    <h1>nōtoノート</h1>
-    <div id="create-notes-area">
-      <div contenteditable="true" id="content" data-placeholder="入力テキスト . . ."></div>
-      <button onClick="saveNote();">Create Note</button>
+      <h1>nōtoノート</h1>
+      <div id="create-notes-area">
+        <div contenteditable="true" id="content" data-placeholder="テキストを入力 . . ."></div>
+        <button onClick="saveNote();">OK</button>
+      </div>
+      <div id="show-notes-area">
+        <ul id="list-of-notes"></ul>
+      </div>
     </div>
-    <div id="show-notes-area">
-      <ul id="list-of-notes"></ul>
-    </div>
-  </div>
   </body>
 </html>
