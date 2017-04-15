@@ -1,0 +1,12 @@
+{
+  "name": "noto-notebook",
+  "version": "1.0.0",
+  "description": "JavaScript-based notebook web app",
+  "url": "https://github.com/AliceArmstrong/notebook_js/",
+  "scripts": {
+    "start": "harp server --port $PORT"
+  },
+  "dependencies": {
+    "harp": "*"
+  }
+}
