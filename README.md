@@ -9,12 +9,14 @@ Technologies used:
 * CSS
 * Trello
 
-**nōtoノート** is a single-page web app made in JavaScript. Our aim of this project was to create a notebook web app with entirely no frameworks, including test frameworks like Jasmine. Our final web app includes all of the functionality of the users stories completed, as well as a few more extra features that are outlined on our [Trello board.](https://trello.com/b/plWhugBk/notes-app)
+**nōtoノート** is a single-page web app made in JavaScript. Our aim of this project was to create a notebook web app with entirely no frameworks, including test frameworks like Jasmine. Our final web app includes all of the functionality of the user stories completed, as well as a few more extra features that are outlined on our [Trello board.](https://trello.com/b/plWhugBk/notes-app)
 
 To achieve this, we had to create our own testing framework from scratch; **GenieJS**. We created GenieJS in JavaScript and used it to TDD our project, building it up alongside our project by creating the testing functionality we needed before writing each bit of functionality for our web app.
 
+**nōtoノート**:
 ![Screenshot](/screenshot.png)
 
+**GenieJS**:
 ![GenieJS](/geniejs.png)
 
 
